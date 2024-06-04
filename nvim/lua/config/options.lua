@@ -7,6 +7,7 @@ o.encoding = "utf-8"
 o.fileencoding = "utf-8"
 
 o.number = true
+o.numberwidth = 1
 
 o.title = true
 o.autoindent = true
