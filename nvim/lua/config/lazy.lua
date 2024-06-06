@@ -5,21 +5,10 @@ if not (vim.uv or vim.loop).fs_stat(lazypath) then
   -- stylua: ignore
   vim.fn.system({ "git", "clone", "--filter=blob:none", "https://github.com/folke/lazy.nvim.git", "--branch=stable", lazypath })
 end
-vim.opt.rtp:prepend(vim.env.LAZY or lazypath)
+vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
   spec = {
-    {
-      "LazyVim/LazyVim",
-      import = "lazyvim.plugins",
-      opts = {
-        colorscheme = "onedark_dark",
-        news = {
-          lazyvim = true,
-          neovim = true,
-        },
-      },
-    },
     -- add LazyVim and import its plugins
     { "LazyVim/LazyVim", import = "lazyvim.plugins" },
     -- import any extras modules here
@@ -38,7 +27,7 @@ require("lazy").setup({
     version = false, -- always use the latest git commit
     -- version = "*", -- try installing the latest stable version for plugins that support semver
   },
-  -- install = { colorscheme = { "tokyonight", "habamax" } },
+  install = { colorscheme = { "tokyonight-night", "habamax" } },
   checker = { enabled = true, notify = false }, -- automatically check for plugin updates
   performance = {
     rtp = {
@@ -49,8 +38,8 @@ require("lazy").setup({
         -- "matchparen",
         -- "netrwPlugin",
         "tarPlugin",
-        "tohtml",
-        "tutor",
+        --"tohtml",
+        --"tutor",
         "zipPlugin",
       },
     },
