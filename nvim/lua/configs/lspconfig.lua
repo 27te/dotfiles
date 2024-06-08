@@ -14,7 +14,9 @@ local servers = {
   "jdtls",
   "bashls",
   "tsserver",
+  "pyright",
   "tailwindcss", -- Agrega tailwindcss aquí
+  "marksman",
 }
 
 -- lsps with default config

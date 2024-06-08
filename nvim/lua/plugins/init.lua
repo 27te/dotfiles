@@ -28,8 +28,12 @@ return {
         "rust-analyzer",
         "intelephense",
         "jdtls",
+        "pyright",
+        "black",
+        "flake8",
         "bash-language-server",
         "astro-language-server",
+        "marksman",
         "tailwindcss-language-server", -- Asegúrate de que esté aquí
       },
     },
@@ -51,6 +55,9 @@ return {
         "bash",
         "astro",
         "tsx",
+        "python",
+        "markdown",
+        "markdown_inline",
       },
       highlight = {
         enable = true,

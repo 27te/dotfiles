@@ -10,8 +10,10 @@ local options = {
     astro = { "prettier-plugin-astro" },
     rust = { "rustfmt" },
     php = { "phpcsfixer" },
-    java = { "google_java_format" },
+    java = { "google-java-format" },
     bash = { "shfmt" },
+    python = { "black" },
+    markdown = { "prettier" },
   },
   format_on_save = {
     timeout_ms = 500,
