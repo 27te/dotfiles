@@ -22,3 +22,7 @@ map("n", "sh", "<C-w>h")
 map("n", "sk", "<C-w>k")
 map("n", "sj", "<C-w>j")
 map("n", "sl", "<C-w>l")
+
+-- Esc
+map("n", ",", ":")
+map("i", "..", "<ESC>")

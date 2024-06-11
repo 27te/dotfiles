@@ -1,3 +1,6 @@
+# set PowerShell to UTF-8
+[console]::InputEncoding = [console]::OutputEncoding = New-Object System.Text.UTF8Encoding
+
 Import-Module posh-git
 $omp_config = Join-Path $PSScriptRoot ".\new.omp.json"
 oh-my-posh --init --shell pwsh --config $omp_config | Invoke-Expression
@@ -21,13 +24,8 @@ Set-PsFzfOption -PSReadlineChordProvider 'Ctrl+f' -PSReadlineChordReverseHistory
 # Env
 $laragon="C:\Users\leand\scoop\apps\laragon\6.0.0\laragon.exe"
 
-function la {
-    param (
-        [string]$Path = "."
-    )
-
-    Get-ChildItem -Path $Path -Force
-}
+# Github Cli
+Invoke-Expression -Command $(gh completion -s powershell | Out-String)
 
 # Fzf style and preview with bat
 $env:FZF_DEFAULT_OPTS="
@@ -54,10 +52,17 @@ Set-Alias less 'C:\Program Files\Git\usr\bin\less.exe'
 Set-Alias tig 'C:\Program Files\Git\usr\bin\tig.exe'
 
 
+function la {
+    param (
+        [string]$Path = "."
+    )
+
+    Get-ChildItem -Path $Path -Force
+}
+
 function ll {
  return  eza --color=always --long --git --no-filesize --icons=always --no-time --no-user --no-permissions
 }
-
 
 function listree{
 	param($file);
@@ -67,11 +72,15 @@ Set-Alias -Name "lt" -Value "listree";
 
 # functions development
 function vite {
-  return npm create vite@latest -y
+  return npm create vite@latest
 }
 
 function astro {
-  return npm create astro@latest -y
+  return npm create astro@latest
+}
+
+function basic-astro{
+  return mkdir components,layouts,styles
 }
 
 function format {
