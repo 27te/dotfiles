@@ -1,7 +1,12 @@
+require "nvchad.mappings"
+
+-- add yours here
 local map = vim.keymap.set
 local opts = { noremap = true, silent = true }
 
--- exit to nvim
+map("n", ",", ":", { desc = "CMD enter command mode" })
+
+map({ "n", "i", "v" }, "<C-s>", "<cmd> w <cr>")
 map("n", "zz", ":q!<cr>", opts)
 map("n", "zw", ":wq!<cr>", opts)
 
@@ -25,4 +30,4 @@ map("n", "sl", "<C-w>l")
 
 -- Esc
 map("n", ",", ":")
-map("i", "..", "<ESC>")
+map("i", "++", "<ESC>")

@@ -51,7 +51,6 @@ Set-Alias top btm
 Set-Alias less 'C:\Program Files\Git\usr\bin\less.exe'
 Set-Alias tig 'C:\Program Files\Git\usr\bin\tig.exe'
 
-
 function la {
     param (
         [string]$Path = "."
