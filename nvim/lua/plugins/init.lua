@@ -30,6 +30,7 @@ return {
         "black",
         "python-lsp-server",
         "pyright",
+        "json-lsp",
         "tailwindcss-language-server",
         "bash-language-server",
         "typescript-language-server",
@@ -74,6 +75,21 @@ return {
         "regex",
         "python",
       },
+    },
+  },
+
+  {
+    "smjonas/inc-rename.nvim",
+    cmd = "IncRename",
+    config = true,
+  },
+
+  {
+    "simrat39/symbols-outline.nvim",
+    keys = { { "<leader>cs", "<cmd>SymbolsOutline<cr>", desc = "Symbols Outline" } },
+    cmd = "SymbolsOutline",
+    opts = {
+      position = "right",
     },
   },
 }
