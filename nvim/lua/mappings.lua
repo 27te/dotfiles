@@ -40,3 +40,6 @@ map("n", "sl", "<C-w>l")
 -- Esc
 map("n", ",", ":")
 map("i", "++", "<ESC>")
+
+-- Back
+map("n", "<C-z>", "u", opts)
